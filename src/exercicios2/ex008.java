@@ -24,8 +24,7 @@ public class ex008 {
         } else {
             System.out.printf("R$ %.2f", imposto);
         }
-
-
+        
         sc.close();
     }
 }
