@@ -4,14 +4,15 @@ public class main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int N = sc.nextInt();
-
-        int soma = 0;
-        for (int i=0; i<N; i++){
-            int x = sc.nextInt();
-            soma += x;
-        }
-        System.out.println(soma);
+        char res;
+        do {
+            System.out.println("Digite a temperatura em Celsius: ");
+            double C = sc.nextInt();
+            double F = 9 * C / 5 + 32;
+            System.out.printf("Equivalente em Fahrenheit: %.2f%n", F);
+            System.out.println("Deseja repetir (s/n)?");
+            res = sc.next().charAt(0);
+        } while (res != 'n');
 
         sc.close();
     }
