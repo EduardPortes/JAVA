@@ -1,7 +1,7 @@
-package application;
+package progstudo.products.application;
 
 
-import util.Product;
+import progstudo.products.util.Product;
 
 import java.util.Scanner;
 

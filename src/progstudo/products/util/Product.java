@@ -1,4 +1,4 @@
-package util;
+package progstudo.products.util;
 
 public class Product {
     public String name;
