@@ -19,7 +19,7 @@ public class Program {
 
         System.out.print("Is there na initial deposit (y/n)? ");
         char response = sc.nextLine().charAt(0);
-        
+
         if (response != 'y') {
             acc = new Account(codeAccount, holder);
         } else {
