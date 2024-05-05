@@ -7,6 +7,7 @@ import java.util.Scanner;
 public class Program {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        Account acc;
 
         System.out.print("Enter account number: ");
         int codeAccount = sc.nextInt();
@@ -18,16 +19,15 @@ public class Program {
 
         System.out.print("Is there na initial deposit (y/n)? ");
         char response = sc.nextLine().charAt(0);
-
-        double balance;
+        
         if (response != 'y') {
-            balance = 0;
+            acc = new Account(codeAccount, holder);
         } else {
             System.out.print("Enter initial deposit value: ");
-            balance = sc.nextDouble();
+             double initialDeposit = sc.nextDouble();
+            acc = new Account(codeAccount, holder, initialDeposit);
         }
 
-        Account acc = new Account(codeAccount, holder, balance);
 
         System.out.println();
         System.out.println("Account data:");
