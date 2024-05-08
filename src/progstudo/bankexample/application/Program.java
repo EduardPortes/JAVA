@@ -24,7 +24,7 @@ public class Program {
             acc = new Account(codeAccount, holder);
         } else {
             System.out.print("Enter initial deposit value: ");
-             double initialDeposit = sc.nextDouble();
+            double initialDeposit = sc.nextDouble();
             acc = new Account(codeAccount, holder, initialDeposit);
         }
 
