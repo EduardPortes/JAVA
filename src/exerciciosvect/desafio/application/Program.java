@@ -37,22 +37,11 @@ public class Program {
 
         System.out.println("Busy rooms:");
 
-        for (int i=0; i < ho.length; i++){
-          if (ho[i] != null){
-              System.out.println(ho[i]);
-          }
+        for (Hotel hotel : ho) {
+            if (hotel != null) {
+                System.out.println(hotel);
+            }
         }
-
-
-
-
-
-
-
-
-
-
-
 
         sc.close();
     }
