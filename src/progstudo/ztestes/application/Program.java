@@ -2,34 +2,32 @@ package progstudo.ztestes.application;
 
 import progstudo.ztestes.entities.Product;
 
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class Program {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Amount of Products: ");
-        int n = sc.nextInt();
+        Instant d01 = Instant.now();
 
-        Product[] vect = new Product[n];
+        LocalDateTime d02 = LocalDateTime.ofInstant(d01, ZoneId.of("America/Sao_Paulo"));
 
-        for (int i=0; i<vect.length; i++){
-            sc.nextLine();
-            System.out.print("Name: ");
-            String name = sc.nextLine();
-            System.out.print("Price: ");
-            double price = sc.nextDouble();
-            vect[i] = new Product(name, price);
-            System.out.println();
-        }
 
-        double sum = 0;
-        for (int i=0; i<vect.length; i++){
-            sum += vect[i].getPrice();
-        }
-        double avg = sum / n;
+        DateTimeFormatter fmt1 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
 
-        System.out.printf("Average price = %.2f%n", avg);
+        LocalDateTime pastWeekLocalDate = d02.minusDays(7);
+        LocalDateTime nextWeekLocalDate = d02.plusDays(7);
+
+        System.out.println("pastWeekLocalDate = " + fmt1.format(pastWeekLocalDate));
+        System.out.println("nextWeekLocalDate = " + fmt1.format(nextWeekLocalDate));
+
+
+
 
         sc.close();
     }
