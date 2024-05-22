@@ -1,19 +1,37 @@
 package progstudo.ztestes.entities;
 
+import java.text.ParseException;
+
 public class Product {
-    private String name;
-    private double price;
+
+    protected String name;
+    protected Double price;
+
+    public Product(String name, Double price) {
+        this.name = name;
+        this.price = price;
+    }
 
     public String getName() {
         return name;
     }
 
-    public Product(String name, double price) {
+    public void setName(String name) {
         this.name = name;
+    }
+
+    public Double getPrice() {
+        return price;
+    }
+
+    public void setPrice(Double price) {
         this.price = price;
     }
 
-    public double getPrice() {
-        return price;
+    public String priceTag() throws ParseException {
+        return name
+                + " $ "
+                + price;
     }
+
 }
