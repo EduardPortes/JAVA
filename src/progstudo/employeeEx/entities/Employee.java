@@ -40,6 +40,7 @@ public class Employee {
         return valuePerHour * hours;
     }
 
+    @Override
     public String toString() {
         return name
                 + " -  $ "
