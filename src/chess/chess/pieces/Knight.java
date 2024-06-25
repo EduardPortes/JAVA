@@ -2,12 +2,16 @@ package chess.chess.pieces;
 
 import chess.boardgame.Board;
 import chess.boardgame.Position;
+import chess.chess.ChessMatch;
 import chess.chess.ChessPiece;
 import chess.chess.Color;
 
 public class Knight extends ChessPiece {
+
+
     public Knight(Board board, Color color) {
         super(board, color);
+
     }
 
     @Override
