@@ -116,7 +116,7 @@ public class ChessMatch {
         if (!type.equals("B") && !type.equals("N") && !type.equals("R") && !type.equals("Q") ){
             return promoted;
         }
-
+ 
         Position pos = promoted.getChessPosition().toPosition();
         Piece p = board.removePiece(pos);
         piecesOnTheBoard.remove(p);
